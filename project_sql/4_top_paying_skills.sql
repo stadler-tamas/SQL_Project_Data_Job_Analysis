@@ -16,7 +16,7 @@ INNER JOIN job_postings_fact AS j ON sj.job_id = j.job_id
 WHERE
     j.salary_year_avg IS NOT NULL
     AND j.job_title_short = 'Data Analyst'
-    AND j.job_work_from_home IS TRUE
+    --AND j.job_work_from_home IS TRUE
 GROUP BY s.skills
 ORDER BY avg_salary DESC
 LIMIT 25;

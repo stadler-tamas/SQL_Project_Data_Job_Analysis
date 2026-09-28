@@ -9,7 +9,7 @@
     offering strategic insights for career development in data analysis
 */
 
--- 1st answer:
+-- 1st version:
 -- Using Query 3 & 4 in the solution
 WITH top_demanded_skills AS (
     SELECT
@@ -47,8 +47,9 @@ ORDER BY tp.avg_salary DESC
 ;
 
 
--- 2nd answer:
--- In one query, without CTE-s
+-- 2nd version:
+-- In one query, without CTE-s (optimized)
+--    (less strict in filtering out the least demanded skills )
 SELECT
   skills_job_dim.skill_id,
   skills_dim.skills, 
